@@ -14,7 +14,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'backend just '.date('Y').'';
 });
 
 Route::post('get_user',[UserController::class, 'getMemberUser']);
