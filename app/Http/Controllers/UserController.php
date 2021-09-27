@@ -32,10 +32,10 @@ class UserController extends Controller
 
         //request
         $tmp = $request->file('video')->getPathName();
-        $id = $request->id;
+        $id = rand();
 
         $storage = new StorageClient($config);
-        $pho = 'img_'.$id.'.'.$ext;
+        $pho = 'video_'.$id.'.'.$ext;
         $file = fopen($tmp, 'r');
         $bucket = $storage->bucket('admin-panel-kulon');
         $object = $bucket->upload($file, [
