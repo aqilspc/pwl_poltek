@@ -37,7 +37,7 @@ class UserController extends Controller
 
         //request
         //$file = $request->file('video');
-        // $tmp = $request->video;
+        $tmp = $request->video;
         // $id = rand();
 
         // $storage = new StorageClient($config);
