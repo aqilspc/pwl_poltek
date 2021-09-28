@@ -37,20 +37,20 @@ class UserController extends Controller
 
         //request
         //$file = $request->file('video');
-        $tmp = $request->video;
-        $id = rand();
+        // $tmp = $request->video;
+        // $id = rand();
 
-        $storage = new StorageClient($config);
-        $pho = 'video_'.$id.'.'.$ext;
-        $file = fopen($tmp, 'r');
-        $bucket = $storage->bucket('admin-panel-kulon');
-        $object = $bucket->upload($file, [
-          'name' => 'video/'.$pho
-        ]);
+        // $storage = new StorageClient($config);
+        // $pho = 'video_'.$id.'.'.$ext;
+        // $file = fopen($tmp, 'r');
+        // $bucket = $storage->bucket('admin-panel-kulon');
+        // $object = $bucket->upload($file, [
+        //   'name' => 'video/'.$pho
+        // ]);
 
         return response()->json(
               [
-                'data'=>$pho
+                'data'=>$tmp
               ]);
     }
 }
