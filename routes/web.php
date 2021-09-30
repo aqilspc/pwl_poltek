@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 Route::post('get_user',[UserController::class, 'getMemberUser']);
-Route::post('up_video',[UserController::class, 'upVideo']);
+Route::get('up_video/{tmp}',[UserController::class, 'upVideo']);
