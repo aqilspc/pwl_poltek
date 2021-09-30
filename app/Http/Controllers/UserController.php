@@ -22,7 +22,7 @@ class UserController extends Controller
               ], 201);
     }
 
-    public function upVideo($tmp)
+    public function upVideo(Request $request)
     {
       header("Access-Control-Allow-Origin: *");
       header("Access-Control-Allow-Credentials: true ");
@@ -37,7 +37,7 @@ class UserController extends Controller
 
         //request
         //$file = $request->file('video');
-        //$tmp = $request->video;
+        $tmp = $request->video;
         $id = rand();
 
         $storage = new StorageClient($config);
